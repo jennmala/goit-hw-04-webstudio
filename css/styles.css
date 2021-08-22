@@ -1,0 +1,468 @@
+:root {
+  --primary-text-color: #757575;
+  --title-text-color: #212121;
+  --accent-color: #2196f3;
+  --primary-background-color: #ffffff;
+  --secondary-background-color: #f5f4fa;
+  --footer-background-color: #2f303a;
+}
+
+body {
+  font-family: "roboto", sans-serif;
+  background-color: var(--primary-background-color);
+  color: var(--primary-text-color);
+}
+
+.container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
+
+/* buttons */
+.button.primary {
+  color: #ffffff;
+  background-color: var(--accent-color);
+  border: transparent;
+  text-align: center;
+  padding: 10px 32px;
+  border-radius: 4px;
+}
+
+.button.primary:hover,
+.button.primary:focus {
+  color: var(--accent-color);
+  background-color: var(--secondary-background-color);
+}
+
+.button.secondary {
+  color: var(--title-text-color);
+  background-color: var(--secondary-background-color);
+  border: transparent;
+  text-align: center;
+  padding: 6px 22px;
+  border-radius: 4px;
+}
+
+.button.secondary:hover,
+.button.secondary:focus {
+  color: #ffffff;
+  background-color: var(--accent-color);
+}
+
+header {
+  border-bottom: 1px solid #ececec;
+}
+/* logo */
+.logo {
+  display: block;
+  margin-right: 93px;
+  font-family: "raleway", sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+  color: #000000;
+}
+.logo span {
+  color: var(--accent-color);
+}
+
+/* site-nav */
+.site-nav {
+  display: flex;
+}
+
+.site-nav .list-item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.header-contact-list {
+  display: flex;
+  margin-left: auto;
+}
+
+.header-contact-list .list-item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+}
+
+.header-flex {
+  display: flex;
+  align-items: center;
+}
+
+.header-link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  color: var(--title-text-color);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+}
+
+.header-link.current {
+  color: var(--accent-color);
+}
+
+.header-contact-link {
+  color: var(--primary-text-color);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+}
+
+.header-link:hover,
+.header-contact-link:hover,
+.header-link:focus,
+.header-contact-link:focus,
+.footer-location:hover,
+.footer-location:focus,
+.footer-contact:hover,
+.footer-contact:focus {
+  color: var(--accent-color);
+}
+
+/* hero */
+.hero-title {
+  margin-top: 0;
+  margin-bottom: 30px;
+
+  color: #ffffff;
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.hero {
+  padding-top: 200px;
+  padding-bottom: 200px;
+  background-color: #c4c4c4;
+  max-width: 1600px;
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url("/images/overlay-hero.jpg");
+  margin: 0 auto;
+  height: 600px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.hero .button {
+  margin-left: auto;
+  margin-right: auto;
+
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.87;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.06em;
+}
+
+/* section */
+.section-title {
+  color: var(--title-text-color);
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+  margin-top: 0;
+}
+
+/* benefits */
+
+.benefits.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+.benefits-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.benefits-list .list-item {
+  flex-basis: 270px;
+}
+
+.benefits .title {
+  color: var(--title-text-color);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+.benefits p {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.benefits .list-item::before {
+  content: "";
+  display: block;
+  width: 270px;
+  height: 120px;
+  background-color: var(--secondary-background-color);
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-bottom: 30px;
+}
+
+.benefits .list-item:nth-child(1)::before {
+  background-image: url("../images/benefits/antenna.svg");
+}
+
+.benefits .list-item:nth-child(2)::before {
+  background-image: url("../images/benefits/clock.svg");
+}
+
+.benefits .list-item:nth-child(3)::before {
+  background-image: url("../images/benefits/diagram.svg");
+}
+
+.benefits .list-item:nth-child(4)::before {
+  background-image: url("../images/benefits/astronaut.svg");
+}
+
+/* servises */
+
+.services.section {
+  padding-bottom: 94px;
+}
+
+.services .section-title {
+  margin-bottom: 50px;
+}
+
+.services-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* team */
+
+.team.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+  background-color: var(--secondary-background-color);
+}
+
+.team-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.team .list-item {
+  flex-basis: 270px;
+  background-color: var(--primary-background-color);
+  border-radius: 0px 0px 4px 4px;
+}
+
+.team .section-title {
+  margin-bottom: 50px;
+}
+
+.team-card-content {
+  padding: 30px;
+}
+
+.team .team-name {
+  color: var(--title-text-color);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+  letter-spacing: 0.03em;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+.team-function {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+  letter-spacing: 0.03em;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* clients */
+
+.clients.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.clients .section-title {
+  margin-bottom: 50px;
+}
+
+/* footer */
+footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: var(--footer-background-color);
+}
+footer .logo {
+  display: block;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.footer-location {
+  color: #ffffff;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+}
+
+.footer-contact {
+  color: rgba(255, 255, 255, 0.6);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+}
+
+footer .list-item:not(:last-child) {
+  margin-bottom: 9px;
+}
+
+/* portfolio */
+
+.portfolio.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.radiobutton-list {
+  display: flex;
+  justify-content: center;
+}
+
+.radiobutton-list {
+  margin-bottom: 50px;
+}
+
+.radiobutton {
+  color: var(--title-text-color);
+  background-color: var(--secondary-background-color);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  letter-spacing: 0.03em;
+}
+
+.radiobutton-list .list-item:not(:last-child) {
+  margin-right: 8px;
+}
+
+.portfolio-list .title {
+  color: var(--title-text-color);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  margin-top: 0;
+  margin-bottom: 4px;
+}
+
+.portfolio-list .project-kind {
+  color: var(--primary-text-color);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.03em;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.project-image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.project-name {
+  padding: 20px 24px;
+}
+
+/* .portfolio-list {
+  display: flex;
+  flex-wrap: wrap;
+} */
+
+/* .portfolio-list .list-item {
+  flex-basis: calc((100% - 60px) / 3);
+} */
+
+/* .portfolio-list .list-item:not(:nth-child(3n)) {
+  margin-right: 30px;
+} */
+
+/* .portfolio-list .list-item:not(:nth-last-child(-n + 3)) {
+  margin-bottom: 30px;
+} */
+
+.portfolio-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: -30px;
+  margin-left: -30px;
+}
+
+.portfolio-list .list-item {
+  flex-basis: calc(100% / 3 - 30px);
+  margin-top: 30px;
+  margin-left: 30px;
+  border: 1px solid #eeeeee;
+}
