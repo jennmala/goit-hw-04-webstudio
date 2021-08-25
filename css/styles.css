@@ -379,34 +379,13 @@ header {
   color: var(--icon-color);
   border: 1px solid var(--icon-color);
   border-radius: 4px;
+  padding: 16px 32px;
 }
 
 .clients-link .icon {
+  width: 106px;
+  height: 60px;
   fill: currentColor;
-}
-
-.clients-link.company-one {
-  padding: 23px 65px;
-}
-
-.clients-link.company-two {
-  padding: 21px 65px;
-}
-
-.clients-link.company-three {
-  padding: 26px 64px;
-}
-
-.clients-link.company-four {
-  padding: 26px 43px;
-}
-
-.clients-link.company-five {
-  padding: 23px 54px;
-}
-
-.clients-link.company-six {
-  padding: 24px 38px;
 }
 
 .clients-link:hover,
