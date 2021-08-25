@@ -5,6 +5,7 @@
   --primary-background-color: #ffffff;
   --secondary-background-color: #f5f4fa;
   --footer-background-color: #2f303a;
+  --icon-color: #afb1b8;
 }
 
 body {
@@ -71,7 +72,22 @@ body {
 .button.secondary:focus {
   color: #ffffff;
   background-color: var(--accent-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
+
+/* section-title */
+.section-title {
+  color: var(--title-text-color);
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+  margin-top: 0;
+}
+
+/* header */
 
 header {
   border-bottom: 1px solid #ececec;
@@ -136,11 +152,18 @@ header {
 }
 
 .header-contact-link {
+  display: flex;
+  align-items: center;
   color: var(--primary-text-color);
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+}
+
+.header-contact-link .icon {
+  fill: currentColor;
+  margin-right: 10px;
 }
 
 .header-link:hover,
@@ -198,17 +221,6 @@ header {
   letter-spacing: 0.06em;
 }
 
-/* section */
-.section-title {
-  color: var(--title-text-color);
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
-  text-align: center;
-  letter-spacing: 0.03em;
-  margin-top: 0;
-}
-
 /* benefits */
 
 .benefits.section {
@@ -243,31 +255,13 @@ header {
   margin-bottom: 0;
 }
 
-.benefits .list-item::before {
-  content: "";
-  display: block;
+.icon-container {
   width: 270px;
   height: 120px;
+  padding: 25px 100px;
   background-color: var(--secondary-background-color);
-  background-repeat: no-repeat;
-  background-position: center;
+  border-radius: 4px;
   margin-bottom: 30px;
-}
-
-.benefits .list-item:nth-child(1)::before {
-  background-image: url("../images/benefits/antenna.svg");
-}
-
-.benefits .list-item:nth-child(2)::before {
-  background-image: url("../images/benefits/clock.svg");
-}
-
-.benefits .list-item:nth-child(3)::before {
-  background-image: url("../images/benefits/diagram.svg");
-}
-
-.benefits .list-item:nth-child(4)::before {
-  background-image: url("../images/benefits/astronaut.svg");
 }
 
 /* servises */
@@ -298,10 +292,12 @@ header {
   justify-content: space-between;
 }
 
-.team .list-item {
+.team-list > .list-item {
   flex-basis: 270px;
   background-color: var(--primary-background-color);
   border-radius: 0px 0px 4px 4px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
 .team .section-title {
@@ -309,7 +305,7 @@ header {
 }
 
 .team-card-content {
-  padding: 30px;
+  padding: 30px 32px;
 }
 
 .team .team-name {
@@ -329,7 +325,36 @@ header {
   text-align: center;
   letter-spacing: 0.03em;
   margin-top: 0;
-  margin-bottom: 0;
+  margin-bottom: 16px;
+}
+
+.social-networks .link {
+  display: block;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  padding: 12px;
+  color: var(--icon-color);
+}
+
+.social-networks .icon {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+.social-networks {
+  display: flex;
+}
+
+.social-networks .list-item + .list-item {
+  margin-left: 10px;
+}
+
+.social-networks .link:hover,
+.social-networks .link:focus {
+  color: #ffffff;
+  background-color: var(--accent-color);
 }
 
 /* clients */
@@ -342,17 +367,75 @@ header {
 .clients .section-title {
   margin-bottom: 50px;
 }
+.clients-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.clients-link {
+  display: block;
+  width: 170px;
+  height: 92px;
+  color: var(--icon-color);
+  border: 1px solid var(--icon-color);
+  border-radius: 4px;
+}
+
+.clients-link .icon {
+  fill: currentColor;
+}
+
+.clients-link.company-one {
+  padding: 23px 65px;
+}
+
+.clients-link.company-two {
+  padding: 21px 65px;
+}
+
+.clients-link.company-three {
+  padding: 26px 64px;
+}
+
+.clients-link.company-four {
+  padding: 26px 43px;
+}
+
+.clients-link.company-five {
+  padding: 23px 54px;
+}
+
+.clients-link.company-six {
+  padding: 24px 38px;
+}
+
+.clients-link:hover,
+.clients-link:focus {
+  color: var(--accent-color);
+  border-color: var(--accent-color);
+}
 
 /* footer */
+
 footer {
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: var(--footer-background-color);
 }
+
+footer .container {
+  display: flex;
+  align-items: start;
+}
+
 footer .logo {
   display: block;
   color: #ffffff;
   margin-bottom: 20px;
+}
+.footer-logo-part {
+  width: 231px;
+  margin-right: 70px;
 }
 
 .footer-location {
@@ -373,8 +456,34 @@ footer .logo {
   letter-spacing: 0.03em;
 }
 
-footer .list-item:not(:last-child) {
+.footer-logo-part .list-item:not(:last-child) {
   margin-bottom: 9px;
+}
+
+.footer-social-networks-part {
+  margin-top: 12px;
+}
+
+.footer-social-networks-part p {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.footer-social-networks-part .social-networks .link {
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.footer-social-networks-part .social-networks .link:hover,
+.footer-social-networks-part .social-networks .link:focus {
+  color: #ffffff;
+  background-color: var(--accent-color);
 }
 
 /* portfolio */
@@ -436,23 +545,6 @@ footer .list-item:not(:last-child) {
   padding: 20px 24px;
 }
 
-/* .portfolio-list {
-  display: flex;
-  flex-wrap: wrap;
-} */
-
-/* .portfolio-list .list-item {
-  flex-basis: calc((100% - 60px) / 3);
-} */
-
-/* .portfolio-list .list-item:not(:nth-child(3n)) {
-  margin-right: 30px;
-} */
-
-/* .portfolio-list .list-item:not(:nth-last-child(-n + 3)) {
-  margin-bottom: 30px;
-} */
-
 .portfolio-list {
   display: flex;
   flex-wrap: wrap;
@@ -464,5 +556,15 @@ footer .list-item:not(:last-child) {
   flex-basis: calc(100% / 3 - 30px);
   margin-top: 30px;
   margin-left: 30px;
+}
+
+.portfolio-list .link {
+  display: block;
   border: 1px solid #eeeeee;
+}
+
+.portfolio-list .link:hover,
+.portfolio-list .link:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
